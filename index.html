@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lance Gabe Alcantara | SAP S/4HANA INVENTORY & SUPPLY CHAIN ANALYST</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#090d16',
+            },
+            teal: {
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* Custom scrollbar & print optimization */
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #ffffff !important; color: #0f172a !important; }
+      section { break-inside: avoid; }
+    }
+    .tab-active {
+      background-color: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-600 selection:text-white">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-navy-900 text-white flex items-center justify-center font-display font-bold text-sm tracking-tight group-hover:bg-teal-600 transition-colors">
+          LA
+        </div>
+        <div>
+          <span class="font-display font-bold text-slate-900 text-base block leading-none">Lance Gabe Alcantara</span>
+          <span class="text-xs text-slate-500 font-medium">Inventory Control & SAP Operations</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <a href="#competencies" class="hover:text-teal-600 transition-colors">Competencies</a>
+        <a href="#tech-stack" class="hover:text-teal-600 transition-colors">SAP & Tools</a>
+        <a href="#experience" class="hover:text-teal-600 transition-colors">Experience</a>
+        <a href="#case-studies" class="hover:text-teal-600 transition-colors">Audit & Projects</a>
+        <a href="#credentials" class="hover:text-teal-600 transition-colors">Credentials</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2">
+        <button onclick="copyRecruiterSummary()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold transition-all cursor-pointer" title="Copy HR-ready text summary to clipboard">
+          <i data-lucide="clipboard-copy" class="w-3.5 h-3.5 text-teal-600"></i>
+          <span>Copy HR Summary</span>
+        </button>
+        <button onclick="openContactModal()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-navy-900 hover:bg-teal-600 text-white text-xs font-semibold shadow-sm transition-all cursor-pointer">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+          <span>Contact</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top" class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-slate-900 text-white py-16 sm:py-24">
+    <!-- Subtle Geometric Background Pattern -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#14b8a6 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Content -->
+        <div class="lg:col-span-8 space-y-6">
+          <!-- Availability Pill -->
+          <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/15 border border-teal-400/30 text-teal-300 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+            <span>Available: Full-Time (Sun–Thu) &amp; Part-Time / Night Shift (4+ hrs/day, Flexible)</span>
+          </div>
+
+          <div class="space-y-3">
+            <p class="text-teal-400 font-semibold tracking-wide uppercase text-xs sm:text-sm flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              San Pablo, Laguna, Philippines (Open to Remote &amp; On-Site)
+            </p>
+            <h1 class="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              Lance Gabe Alcantara
+            </h1>
+            <h2 class="text-lg sm:text-2xl font-medium text-slate-300">
+              Material Inventory Associate <span class="text-teal-400 mx-1">|</span> SAP S/4HANA Operations &amp; Inventory Control
+            </h2>
+          </div>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Detail-oriented inventory and operations specialist with <strong class="text-white font-semibold">90+ hours of formal corporate skilling</strong> and hands-on experience across telecommunications, banking, and FMCG. Proven track record in daily SAP S/4HANA execution, three-way PO/delivery reconciliation, zone-wide physical-to-digital audits, and self-taught spreadsheet &amp; BI tracking.
+          </p>
+
+          <!-- Primary CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-2 no-print">
+            <a href="#case-studies" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-semibold text-sm shadow-lg shadow-teal-950/50 transition-all">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+              <span>Audit &amp; Reconciliation Case Study</span>
+            </a>
+            <a href="#tech-stack" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold text-sm transition-all">
+              <i data-lucide="terminal" class="w-4 h-4 text-teal-400"></i>
+              <span>Explore SAP T-Codes &amp; Tools</span>
+            </a>
+            <button onclick="window.print()" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-transparent hover:bg-white/10 border border-slate-700 text-slate-300 font-medium text-sm transition-all cursor-pointer">
+              <i data-lucide="printer" class="w-4 h-4"></i>
+              <span>Print / Save PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Quick-Stats Card (HR Snapshot) -->
+        <div class="lg:col-span-4">
+          <div class="bg-slate-800/70 backdrop-blur-md border border-slate-700/80 rounded-2xl p-6 space-y-5 shadow-xl">
+            <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-teal-400">HR Recruiter Snapshot</span>
+              <span class="text-xs text-slate-400">Verified Profile</span>
+            </div>
+
+            <div class="space-y-4 text-sm">
+              <div class="flex items-start gap-3">
+                <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400 mt-0.5">
+                  <i data-lucide="database" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">SAP S/4HANA Production</p>
+                  <p class="text-slate-400 text-xs">Daily execution across MM/IM &amp; Physical Inventory T-Codes</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400 mt-0.5">
+                  <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">Zone-Wide Audit Lead</p>
+                  <p class="text-slate-400 text-xs">Quarterly &amp; Annual Laguna zone physical-to-digital reconciliation</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400 mt-0.5">
+                  <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">Practical Data Reporting</p>
+                  <p class="text-slate-400 text-xs">Self-taught Excel, Google Sheets, Power BI &amp; Looker Studio trackers</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400 mt-0.5">
+                  <i data-lucide="building-2" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-white">Enterprise Pedigree</p>
+                  <p class="text-slate-400 text-xs">PLDT Inc. (Telecom), Pepsi (FMCG) &amp; RCBC (Banking)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-700/80 flex items-center justify-between text-xs text-slate-300">
+              <span>Languages:</span>
+              <span class="font-semibold text-white">English &amp; Tagalog (Fluent)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-20">
+
+    <!-- 1. Core Competencies -->
+    <section id="competencies" class="space-y-8">
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Core Value Proposition</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Operational Strengths &amp; Competencies</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Bridging disciplined warehouse floor execution with structured system reconciliation and clear daily reporting.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-navy-900 text-teal-400 flex items-center justify-center mb-4">
+            <i data-lucide="boxes" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">Enterprise Resource Planning (SAP S/4HANA)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mt-2">
+            Daily execution inside a live SAP S/4HANA production client—handling materials tracking, stock transfers (Movement Type 311), reservations, physical inventory reconciliation, and serialized equipment verification.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-navy-900 text-teal-400 flex items-center justify-center mb-4">
+            <i data-lucide="search-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">Inventory Control &amp; Zone Auditing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mt-2">
+            Facilitating annual and quarterly physical-to-digital inventory audits across the Laguna zone, performing three-way PO/delivery/billing matching, and escalating accountability variances with formal documentation.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-navy-900 text-teal-400 flex items-center justify-center mb-4">
+            <i data-lucide="line-chart" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">Foundational Data Reporting &amp; Visualization</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mt-2">
+            Self-taught, working knowledge of <strong>Excel, Google Sheets, Power BI, and Looker Studio</strong> to organize raw ERP exports, build formula-driven tracking sheets, and visualize daily stock alerts and discrepancies.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-teal-500/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-navy-900 text-teal-400 flex items-center justify-center mb-4">
+            <i data-lucide="briefcase" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">Cross-Industry Operations</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mt-2">
+            Proven administrative coordination, logistics support, and strict compliance with internal controls across high-volume corporate environments in <strong>Telecom (PLDT Inc.), FMCG (Pepsi), and Banking (RCBC)</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Technical Stack & SAP T-Code Explorer -->
+    <section id="tech-stack" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Technical Proficiency</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Technical Stack &amp; SAP S/4HANA Explorer</h2>
+          <p class="text-slate-600 text-sm mt-1">Select a category below to inspect daily operational T-Codes and supporting tools.</p>
+        </div>
+
+        <!-- Interactive Filter Tabs -->
+        <div class="flex flex-wrap gap-2 no-print" role="tablist">
+          <button onclick="switchTechTab('sap')" id="tab-sap" class="tab-btn tab-active px-4 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold transition-all cursor-pointer">
+            SAP S/4HANA T-Codes
+          </button>
+          <button onclick="switchTechTab('spreadsheets')" id="tab-spreadsheets" class="tab-btn px-4 py-2 rounded-xl border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 text-xs sm:text-sm font-semibold transition-all cursor-pointer">
+            Excel &amp; Google Sheets
+          </button>
+          <button onclick="switchTechTab('bi')" id="tab-bi" class="tab-btn px-4 py-2 rounded-xl border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 text-xs sm:text-sm font-semibold transition-all cursor-pointer">
+            BI &amp; Visualization
+          </button>
+          <button onclick="switchTechTab('audit')" id="tab-audit" class="tab-btn px-4 py-2 rounded-xl border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 text-xs sm:text-sm font-semibold transition-all cursor-pointer">
+            Accounting &amp; Audit
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+        <!-- Panel 1: SAP S/4HANA -->
+        <div id="panel-sap" class="tech-panel space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900">SAP S/4HANA (Live Production Client Execution)</h3>
+              <p class="text-xs sm:text-sm text-slate-500">Hands-on daily transaction processing across Materials Management &amp; Physical Inventory modules.</p>
+            </div>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200 text-xs font-semibold w-fit">
+              Core Daily Proficiency
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-teal-500/50 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-mono font-bold text-sm text-navy-900 bg-teal-100/70 px-2 py-0.5 rounded">MB51</span>
+                <span class="text-[11px] font-medium text-slate-400">Movements</span>
+              </div>
+              <p class="font-semibold text-sm text-slate-800">Material Document List</p>
+              <p class="text-xs text-slate-600 mt-1">Tracks historical stock movements, goods receipts, issuances, and transfer postings (e.g., Movement Type 311).</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-teal-500/50 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-mono font-bold text-sm text-navy-900 bg-teal-100/70 px-2 py-0.5 rounded">MB52</span>
+                <span class="text-[11px] font-medium text-slate-400">Balances</span>
+              </div>
+              <p class="font-semibold text-sm text-slate-800">Warehouse Stocks on Hand</p>
+              <p class="text-xs text-slate-600 mt-1">Displays real-time unrestricted, quality-inspection, and blocked stock balances across storage locations.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-teal-500/50 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-mono font-bold text-sm text-navy-900 bg-teal-100/70 px-2 py-0.5 rounded">ME2N</span>
+                <span class="text-[11px] font-medium text-slate-400">Purchasing</span>
+              </div>
+              <p class="font-semibold text-sm text-slate-800">Purchasing Documents by PO</p>
+              <p class="text-xs text-slate-600 mt-1">Used every morning to cross-check open purchase orders, pending deliveries, and PO fulfillment status.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-teal-500/50 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-mono font-bold text-sm text-navy-900 bg-teal-100/70 px-2 py-0.5 rounded">MB21 / MB22 / MB25</span>
+                <span class="text-[11px] font-medium text-slate-400">Reservations</span>
+              </div>
+              <p class="font-semibold text-sm text-slate-800">Material Reservations Suite</p>
+              <p class="text-xs text-slate-600 mt-1">Creates, modifies, and monitors material reservation lists to ensure stock allocation for field operations.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-teal-500/50 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-mono font-bold text-sm text-navy-900 bg-teal-100/70 px-2 py-0.5 rounded">IQ03 / IQ09</span>
+                <span class="text-[11px] font-medium text-slate-400">Serialization</span>
+              </div>
+              <p class="font-semibold text-sm text-slate-800">Material Serial Number Tracking</p>
+              <p class="text-xs text-slate-600 mt-1">Audits individual equipment serial numbers (modems, telsets) and verifies custody status on site.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-teal-500/50 transition-colors">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-mono font-bold text-sm text-navy-900 bg-teal-100/70 px-2 py-0.5 rounded">MD04 &amp; ZMMIM001</span>
+                <span class="text-[11px] font-medium text-slate-400">MRP &amp; Custom</span>
+              </div>
+              <p class="font-semibold text-sm text-slate-800">Stock/Requirements &amp; Custom Reports</p>
+              <p class="text-xs text-slate-600 mt-1">Monitors live stock-to-demand requirements (MD04) alongside custom enterprise inventory views (ZMMIM001).</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-teal-500/50 transition-colors sm:col-span-2 lg:col-span-3">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-mono font-bold text-sm text-navy-900 bg-teal-100/70 px-2 py-0.5 rounded">MI05 / MI21 / MI31</span>
+                <span class="text-[11px] font-medium text-slate-400">Physical Inventory Suite</span>
+              </div>
+              <p class="font-semibold text-sm text-slate-800">End-to-End Physical Inventory Execution</p>
+              <p class="text-xs text-slate-600 mt-1">Generates physical inventory batch sessions (MI31), prints count sheets (MI21), and updates/reconciles physical count entries (MI05) during zone-wide audits.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Spreadsheets & Reporting -->
+        <div id="panel-spreadsheets" class="tech-panel hidden space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900">Microsoft Excel &amp; Google Sheets</h3>
+              <p class="text-xs sm:text-sm text-slate-500">Working knowledge applied to daily inventory tracking, discrepancy flags, and SAP data cleanup.</p>
+            </div>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold w-fit">
+              Working Knowledge
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+              <h4 class="font-bold text-slate-900">Self-Made Formula Trackers</h4>
+              <p class="text-slate-600 text-xs mt-1 leading-relaxed">Built structured tracking sheets with lookup and conditional formulas to compare SAP exports against physical counts and flag low-stock or variance alerts automatically.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+              <h4 class="font-bold text-slate-900">Pivot Tables &amp; Introductory Power Query</h4>
+              <p class="text-slate-600 text-xs mt-1 leading-relaxed">Uses pivot summaries and basic Power Query cleanup steps to standardize raw ERP movement logs into clean, readable daily status tables.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: BI & Visualization -->
+        <div id="panel-bi" class="tech-panel hidden space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900">Microsoft Power BI &amp; Google Looker Studio</h3>
+              <p class="text-xs sm:text-sm text-slate-500">Foundational, self-taught visualization skills used to turn spreadsheet trackers into clear operational views.</p>
+            </div>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold w-fit">
+              Foundational / Self-Taught
+            </span>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-sm">
+            <h4 class="font-bold text-slate-900">Daily Alert &amp; Discrepancy Dashboards</h4>
+            <p class="text-slate-600 text-xs mt-1 leading-relaxed">Connects structured Excel/Google Sheets inventory trackers into straightforward visual dashboards so stock alerts, pending deliveries, and variance trends can be reviewed and reported clearly on a daily basis.</p>
+          </div>
+        </div>
+
+        <!-- Panel 4: Accounting & Audit -->
+        <div id="panel-audit" class="tech-panel hidden space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900">Accounting Controls &amp; Audit Compliance</h3>
+              <p class="text-xs sm:text-sm text-slate-500">Operational reconciliation disciplines supporting financial accuracy and loss prevention.</p>
+            </div>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200 text-xs font-semibold w-fit">
+              Applied Field Experience
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+              <h4 class="font-bold text-slate-900">Three-Way PO, Delivery &amp; Billing Matching</h4>
+              <p class="text-slate-600 text-xs mt-1 leading-relaxed">Cross-checks digital purchase orders against physical receiving documents, supplier billing records, serial numbers, and actual on-site quantities.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+              <h4 class="font-bold text-slate-900">Journal Entry Interpretation &amp; Variance Escalation</h4>
+              <p class="text-slate-600 text-xs mt-1 leading-relaxed">Reads general ledger journal postings tied to inventory movements and prepares formal audit discrepancy documentation for supervisory review.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Professional Experience Timeline -->
+    <section id="experience" class="space-y-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Career Track Record</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Professional Experience</h2>
+      </div>
+
+      <div class="relative border-l-2 border-slate-200 ml-3 sm:ml-4 space-y-10 pl-6 sm:pl-8">
+        <!-- Role 1: PLDT Inc. -->
+        <div class="relative">
+          <span class="absolute -left-[33px] sm:-left-[41px] top-1 w-4 h-4 rounded-full bg-teal-600 ring-4 ring-slate-50"></span>
+          <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+              <div>
+                <div class="flex items-center gap-2.5 flex-wrap">
+                  <h3 class="font-display text-xl font-bold text-slate-900">Material Inventory Associate</h3>
+                  <span class="px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200 text-xs font-semibold">Current Role</span>
+                </div>
+                <p class="text-slate-700 font-semibold text-sm mt-0.5">PLDT Inc. <span class="text-slate-400 font-normal">| Telecommunications</span></p>
+              </div>
+              <div class="text-xs text-slate-500 font-medium bg-slate-100 px-3 py-1.5 rounded-lg w-fit">
+                Schedule: Sunday – Thursday
+              </div>
+            </div>
+
+            <ul class="mt-4 space-y-2.5 text-sm text-slate-600 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-1"></i>
+                <span><strong>Daily Start-of-Shift PO &amp; Receiving Verification:</strong> Cross-check open purchase orders in SAP S/4HANA (<code class="text-xs bg-slate-100 px-1 py-0.5 rounded">ME2N</code>/<code class="text-xs bg-slate-100 px-1 py-0.5 rounded">MB51</code>) every morning to confirm complete vs. pending deliveries, aligning physical receiving documents, digital POs, serial numbers, and on-site quantities.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-1"></i>
+                <span><strong>Standardized Transaction Mapping:</strong> Categorize material movements accurately across warehouse operations, including Movement Type <code class="text-xs bg-slate-100 px-1 py-0.5 rounded">311</code> transfers and structured pickup/return tracking statuses.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-1"></i>
+                <span><strong>Zone-Wide Physical-to-Digital Audits:</strong> Facilitate quarterly and annual physical inventory audits across the Laguna zone, reconciling physical stock and serialized equipment against SAP balances.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-1"></i>
+                <span><strong>Continuous Upskilling:</strong> Completed <strong>90+ hours</strong> of formal corporate development and technical skilling modules focused on operational efficiency and workplace execution.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2: Pepsi & RCBC -->
+        <div class="relative">
+          <span class="absolute -left-[33px] sm:-left-[41px] top-1 w-4 h-4 rounded-full bg-navy-900 ring-4 ring-slate-50"></span>
+          <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
+              <div>
+                <h3 class="font-display text-xl font-bold text-slate-900">Operations &amp; Administrative Support Roles</h3>
+                <p class="text-slate-700 font-semibold text-sm mt-0.5">Pepsi &amp; RCBC <span class="text-slate-400 font-normal">| FMCG &amp; Banking</span></p>
+              </div>
+              <div class="text-xs text-slate-500 font-medium bg-slate-100 px-3 py-1.5 rounded-lg w-fit">
+                Prior Experience
+              </div>
+            </div>
+
+            <ul class="mt-4 space-y-2.5 text-sm text-slate-600 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-500 shrink-0 mt-1"></i>
+                <span>Managed high-volume administrative workflows, documentation verification, and operational coordination within fast-paced FMCG and banking environments.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-500 shrink-0 mt-1"></i>
+                <span>Maintained strict adherence to internal controls, audit trails, reporting timelines, and cross-departmental compliance standards.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Case Studies & Practical Applications -->
+    <section id="case-studies" class="space-y-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Proof of Execution</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Audit Case Study &amp; Practical Applications</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-1">Concrete examples of inventory discrepancy resolution, operational tracking, and brand collateral design.</p>
+      </div>
+
+      <!-- Featured Highlight Card: Annual Physical Inventory Audit -->
+      <div class="bg-navy-900 text-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-800">
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <span class="px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-bold uppercase tracking-wider">
+              Featured Audit Case Study
+            </span>
+            <span class="text-xs text-slate-400">Laguna Zone • Annual Physical Inventory</span>
+          </div>
+          <span class="text-xs font-mono text-teal-400">SAP S/4HANA vs. Physical Custody</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
+              Personnel Accountability Variance Detection &amp; Escalation
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              During the Annual Physical Inventory audit, physical-to-digital verification uncovered a custody discrepancy between SAP S/4HANA accountability records and actual on-hand telecommunications equipment (telsets).
+            </p>
+            <div class="space-y-2 text-sm text-slate-300">
+              <p><strong class="text-white">• Finding:</strong> Digital records showed a field personnel member holding <span class="text-teal-300 font-semibold">20 units of telsets</span> under active accountability, while physical inspection confirmed only <span class="text-amber-300 font-semibold">13 units</span> on hand.</p>
+              <p><strong class="text-white">• Action Taken:</strong> Documented the exact <span class="text-rose-300 font-semibold">7-unit negative variance</span> with supporting audit logs and formally escalated the findings to the personnel's supervisor.</p>
+              <p><strong class="text-white">• Outcome:</strong> Initiated an official internal office memo requiring formal explanation of the missing equipment and restoring accurate accountability records.</p>
+            </div>
+          </div>
+
+          <!-- Visual Metric Breakdown Box -->
+          <div class="lg:col-span-5 bg-slate-800/80 border border-slate-700 rounded-xl p-5 space-y-4">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Variance Reconciliation Summary</p>
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-700">
+                <span class="block text-2xl font-display font-extrabold text-white">20</span>
+                <span class="text-[11px] text-slate-400">SAP Digital Record</span>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900/90 border border-slate-700">
+                <span class="block text-2xl font-display font-extrabold text-teal-400">13</span>
+                <span class="text-[11px] text-slate-400">Physical Count</span>
+              </div>
+              <div class="p-3 rounded-lg bg-rose-950/60 border border-rose-500/40">
+                <span class="block text-2xl font-display font-extrabold text-rose-400">-7</span>
+                <span class="text-[11px] text-rose-200">Escalated Variance</span>
+              </div>
+            </div>
+            <div class="text-xs text-slate-300 bg-slate-900/60 p-3 rounded-lg border border-slate-700/70">
+              <strong>Control Impact:</strong> Prevented unrecorded asset loss and enforced supervisory accountability through formal memo documentation.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Practical Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 text-xs font-semibold text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+              <i data-lucide="table" class="w-3.5 h-3.5"></i>
+              <span>Workflow Automation</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900">Automated Inventory &amp; Movement Trackers</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Built custom formula-driven trackers in <strong>Excel and Google Sheets</strong> paired with foundational <strong>Power BI / Looker Studio</strong> dashboards to visualize daily alerts, track material movements, and flag discrepancies prior to formal quarterly audits.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-100 flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+            <span class="px-2.5 py-1 rounded bg-slate-100">Excel Formulas</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100">Google Sheets</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100">BI Alert Views</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">
+              <i data-lucide="pen-tool" class="w-3.5 h-3.5"></i>
+              <span>Creative &amp; Operational Collateral</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900">Brand &amp; Promotional Collateral (Luxeco Travel and Tours)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Conceptualized structured operational and promotional merchandise—including custom travel journals and desk calendar notepads—balancing day-to-day practical utility with cohesive brand presentation.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-100 flex flex-wrap gap-2 text-xs font-medium text-slate-500">
+            <span class="px-2.5 py-1 rounded bg-slate-100">Print Collateral</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100">Layout Design</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100">Brand Utility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Education, Certifications & HR Fit Summary -->
+    <section id="credentials" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Left: Certifications & Languages -->
+      <div class="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Continuous Development</span>
+          <h2 class="font-display text-2xl font-bold text-slate-900 mt-1">Training, Certifications &amp; Languages</h2>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+            <div class="p-2.5 rounded-lg bg-navy-900 text-teal-400 shrink-0">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">PLDT Inc. Skilling &amp; Development Program</h3>
+              <p class="text-xs text-slate-600 mt-0.5"><strong>90+ Hours Completed</strong> in corporate operational execution, supply chain standards, and workplace efficiency.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+            <div class="p-2.5 rounded-lg bg-navy-900 text-teal-400 shrink-0">
+              <i data-lucide="badge-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">LinkedIn Learning Certifications</h3>
+              <p class="text-xs text-slate-600 mt-0.5">Certified in <strong>Team Leadership</strong> and <strong>Organizational Culture</strong> (82% Assessment Score).</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+            <div class="p-2.5 rounded-lg bg-navy-900 text-teal-400 shrink-0">
+              <i data-lucide="languages" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-sm">Languages</h3>
+              <p class="text-xs text-slate-600 mt-0.5">Fluent in <strong>English</strong> and <strong>Tagalog</strong> (clear written and spoken business communication).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: HR Assessment & Placement Fit -->
+      <div class="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Recruiter Notes</span>
+          <h2 class="font-display text-2xl font-bold text-slate-900 mt-1">HR Assessment &amp; Role Fit</h2>
+        </div>
+
+        <div class="space-y-4 text-sm">
+          <div>
+            <h3 class="font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-teal-600"></span>
+              Ideal Target Roles
+            </h3>
+            <p class="text-slate-600 text-xs mt-1 leading-relaxed">
+              Materials Management Specialist, Inventory Control Coordinator, Supply Chain &amp; Logistics Support Associate, and Operations Support Analyst.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-teal-600"></span>
+              Core Differentiator
+            </h3>
+            <p class="text-slate-600 text-xs mt-1 leading-relaxed">
+              Combines verified, daily SAP S/4HANA production execution (<code class="bg-slate-100 px-1 rounded">MB*</code>/<code class="bg-slate-100 px-1 rounded">MI*</code>/<code class="bg-slate-100 px-1 rounded">ME2N</code>) with self-starter initiative in building spreadsheet trackers and BI alert views rather than relying solely on manual logs.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-teal-50/70 border border-teal-200/80">
+            <h3 class="font-bold text-teal-950 text-xs uppercase tracking-wider">Transparent Onboarding Note</h3>
+            <p class="text-teal-900 text-xs mt-1 leading-relaxed">
+              Immediately productive in SAP inventory transactions, physical audits, and three-way PO/delivery reconciliation. Requires only standard procedural onboarding for tasks outside current scope (such as creating new material master records via <code class="bg-white/80 px-1 rounded">MM01</code> or building enterprise-scale BI data architectures from scratch).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="text-center sm:text-left">
+        <p class="font-display font-bold text-white text-base">Lance Gabe Alcantara</p>
+        <p class="text-xs mt-1">San Pablo, Laguna, Philippines • Material Inventory Associate &amp; SAP S/4HANA Operations</p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 no-print">
+        <button onclick="copyRecruiterSummary()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition-colors cursor-pointer">
+          <i data-lucide="copy" class="w-3.5 h-3.5 text-teal-400"></i>
+          <span>Copy Portfolio Text</span>
+        </button>
+        <button onclick="openContactModal()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-semibold transition-colors cursor-pointer">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>Schedule Interview / Inquiry</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Contact / Recruiter Inquiry Modal -->
+  <div id="contactModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4 no-print">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-slate-200 relative animate-fadeIn">
+      <button onclick="closeContactModal()" class="absolute top-4 right-4 p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 cursor-pointer" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-1 mb-5">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Recruiter &amp; Hiring Inquiry</span>
+        <h3 class="font-display text-xl font-bold text-slate-900">Connect with Lance Gabe Alcantara</h3>
+        <p class="text-xs text-slate-500">Available for Full-Time (Sun–Thu) or Part-Time / Night Shift (4+ hrs/day, flexible).</p>
+      </div>
+
+      <form id="inquiryForm" onsubmit="handleInquirySubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name / Recruiter Name</label>
+          <input type="text" id="recruiterName" required placeholder="e.g., Jane Doe, Talent Acquisition" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Company &amp; Role Title</label>
+          <input type="text" id="companyRole" required placeholder="e.g., Inventory Control Specialist (Remote)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Work Arrangement</label>
+          <select id="workType" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <option value="Part-Time / Night Shift (Flexible)">Part-Time / Night Shift (Flexible 4+ hrs/day)</option>
+            <option value="Full-Time (Sun-Thu or Standard)">Full-Time Role</option>
+            <option value="Project / Consulting">Short-Term Audit / Inventory Project</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Message / Interview Details</label>
+          <textarea id="inquiryMessage" rows="3" required placeholder="Share shift hours, platform tools, or interview availability..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-navy-900 hover:bg-teal-600 text-white font-semibold text-sm transition-colors cursor-pointer flex items-center justify-center gap-2">
+          <i data-lucide="check" class="w-4 h-4"></i>
+          <span>Generate &amp; Copy Interview Invite</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Banner (No alert() used) -->
+  <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-xl bg-navy-900 text-white text-xs sm:text-sm font-medium shadow-xl border border-teal-500/40 no-print">
+    <i data-lucide="check-circle" class="w-4 h-4 text-teal-400 shrink-0"></i>
+    <span id="toastText">Copied to clipboard!</span>
+  </div>
+
+  <!-- Hidden Textarea for Reliable Clipboard Copy -->
+  <textarea id="clipboardBuffer" class="sr-only" aria-hidden="true"></textarea>
+
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+
+    // Interactive Tab Switcher for Technical Stack
+    function switchTechTab(tabKey) {
+      const panels = document.querySelectorAll('.tech-panel');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      panels.forEach(panel => panel.classList.add('hidden'));
+      buttons.forEach(btn => {
+        btn.classList.remove('tab-active');
+        btn.classList.add('bg-white', 'text-slate-700');
+      });
+
+      const activePanel = document.getElementById('panel-' + tabKey);
+      const activeBtn = document.getElementById('tab-' + tabKey);
+
+      if (activePanel) activePanel.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('tab-active');
+        activeBtn.classList.remove('bg-white', 'text-slate-700');
+      }
+    }
+
+    // Show Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById('toastBanner');
+      const textEl = document.getElementById('toastText');
+      textEl.textContent = message;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 3500);
+    }
+
+    // Copy Text Helper using execCommand fallback for iFrame safety
+    function copyTextToClipboard(text, successMsg) {
+      const buffer = document.getElementById('clipboardBuffer');
+      buffer.value = text;
+      buffer.classList.remove('sr-only');
+      buffer.select();
+      buffer.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        showToast(successMsg);
+      } catch (err) {
+        showToast('Unable to copy automatically. Please select text manually.');
+      }
+      buffer.classList.add('sr-only');
+    }
+
+    // Copy HR-Ready Portfolio Summary
+    function copyRecruiterSummary() {
+      const summary = `LANCE GABE ALCANTARA
+Location: San Pablo, Laguna, Philippines
+Target Roles: Materials Management Specialist | Inventory Control Coordinator | Operations Support
+Availability: Full-Time (Sun-Thu) or Part-Time / Night Shift (4+ hrs/day, flexible)
+
+SUMMARY:
+Detail-oriented Material Inventory Associate with 90+ hours of formal corporate skilling and hands-on experience across Telecom (PLDT Inc.), FMCG (Pepsi), and Banking (RCBC). Experienced in daily SAP S/4HANA production execution (MB51, MB52, MB21/22/25, ME2N, IQ03/09, MD04, ZMMIM001, MI05/21/31), three-way PO/delivery/billing reconciliation, Laguna zone physical-to-digital inventory audits, and self-taught Excel, Google Sheets, Power BI, and Looker Studio trackers.
+
+KEY AUDIT HIGHLIGHT:
+Identified a 7-unit telset accountability variance (20 digital vs. 13 physical) during Annual Physical Inventory, documenting and escalating the variance for official supervisory memo resolution.
+
+CERTIFICATIONS & LANGUAGES:
+- PLDT Inc. Skilling & Development Program (90+ Hours)
+- LinkedIn Learning: Team Leadership & Organizational Culture (82% Assessment Score)
+- Languages: Fluent in English & Tagalog`;
+
+      copyTextToClipboard(summary, 'HR-ready portfolio summary copied to clipboard!');
+    }
+
+    // Modal Controls
+    function openContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Handle Contact Form Submission
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('recruiterName').value.trim();
+      const role = document.getElementById('companyRole').value.trim();
+      const type = document.getElementById('workType').value;
+      const msg = document.getElementById('inquiryMessage').value.trim();
+
+      const formattedInvite = `Interview / Role Inquiry for Lance Gabe Alcantara
+From: ${name}
+Company & Role: ${role}
+Schedule Type: ${type}
+Details: ${msg}`;
+
+      copyTextToClipboard(formattedInvite, 'Inquiry formatted & copied! Ready to paste into your email or message.');
+      closeContactModal();
+      e.target.reset();
+    }
+
+    // Close modal on outside click
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeContactModal();
+      }
+    });
+  </script>
+</body>
+</html>
